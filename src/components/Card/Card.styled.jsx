@@ -16,3 +16,11 @@ align-items: center;
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
 `;
+
+export const BG = styled.section`
+  display: flex;
+  background-image: url(../../images/quotes.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;

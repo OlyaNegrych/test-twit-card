@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Btn = styled.button`
+cursor: pointer;
   justify-content: center;
   align-items: center;
   padding: 14px 28px;

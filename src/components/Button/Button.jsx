@@ -1,14 +1,18 @@
-import { useState } from 'react';
 import {Btn} from './Button.styled';
 
-const Button = data => {
-  const [followers, setFollowers] = useState(100500);
-
-  const handleClick = () => {
-    setFollowers((followers += 1));
-  };
-
-  return <Btn>Follow</Btn>;
+const Button = ({ handleClick, isFollowing }) => {
+  // return <Btn onClick={handleClick}>Follow</Btn>;
+  return (
+    <>
+      {!isFollowing ? (
+        <Btn onClick={handleClick}>Follow</Btn>
+      ) : (
+        <Btn style={{ backgroundColor: '#5CD3A8' }} onClick={handleClick}>
+          Following
+        </Btn>
+      )}
+    </>
+  );
 };
 
 export default Button;
