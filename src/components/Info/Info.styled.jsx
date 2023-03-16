@@ -1,7 +1,10 @@
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
-// export const AddInfoList = styled.ul`
-//   list-style: none;
-//   font-size: 20px;
-//   line-height: 1.5;
-// `;
+export const UserPhoto = styled.img`
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 62px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+`;

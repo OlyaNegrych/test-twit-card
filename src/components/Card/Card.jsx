@@ -1,10 +1,8 @@
 import { useState } from 'react';
+import user from '../../data/user.json';
 import Button from '../Button/Button';
 import Info from 'components/Info/Info';
-// import //   SearchFormBtn,
-// //   SearchFormBtnLabel,
-// //   SearchFormInput,
-// '../Card/Card.styled';
+import { CardWrapper} from '../Card/Card.styled';
 
 const Card = data => {
   const [followers, setFollowers] = useState(100500);
@@ -15,16 +13,13 @@ const Card = data => {
 
   return (
     <>
-      <section>
-        <picture>
-          <source src="../../images/logo.png"/>
-        </picture>
-        <img src="../../images/quotes.png" alt="quotes"></img>
-              <img src="../" alt="quotes"></img>
-              
+      <CardWrapper>
+        <img src="../../images/logo.png" alt="logo"></img>
+        <img src="../images/quotes.png" alt="quotes"></img>
+
         <Info />
         <Button onClick={handleClick} />
-      </section>
+      </CardWrapper>
     </>
   );
 };

@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import { Btn } from './Button';
-import //   SearchFormBtn,
-//   SearchFormBtnLabel,
-//   SearchFormInput,
-'./Button.styled';
+import {Btn} from './Button.styled';
 
 const Button = data => {
   const [followers, setFollowers] = useState(100500);
@@ -12,7 +8,7 @@ const Button = data => {
     setFollowers((followers += 1));
   };
 
-  return <button>Follow</button>;
+  return <Btn>Follow</Btn>;
 };
 
 export default Button;
