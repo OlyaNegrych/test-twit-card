@@ -19,7 +19,7 @@ const Card = data => {
         <picture>
           <source src="../../images/logo.png"/>
         </picture>
-        <img src="../../images/logo.png" alt="logo"></img>
+        <img src="../../images/quotes.png" alt="quotes"></img>
               <img src="../" alt="quotes"></img>
               
         <Info />
