@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const CardWrapper = styled.section`
+position: relative;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;

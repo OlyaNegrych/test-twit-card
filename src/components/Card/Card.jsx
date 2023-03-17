@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
-// import user from '../../data/user.json';
-// import Button from '../Button/Button';
-import { Btn } from '../Button/Button.styled';
+import user from '../../data/user.json';
 import Info from 'components/Info/Info';
-import { CardWrapper, BG } from '../Card/Card.styled';
+import Deco from '../Deco/Deco';
+import { Btn } from '../Button/Button.styled';
+import { CardWrapper } from '../Card/Card.styled';
+// import Button from '../Button/Button';
 
 const Card = data => {
   const [user, setUser] = useState('Mango Polly');
-  const [tweets, setTweets] = useState(777);
-  const [followers, setFollowers] = useState(100500);
+  const [tweets, setTweets] = useState(999);
+  const [followers, setFollowers] = useState(() => {
+    return JSON.parse(localStorage.getItem(user + 'F')) ?? 100500;
+  });
   const [isFollowing, setIsFollowing] = useState(() => {
      return JSON.parse(localStorage.getItem(user)) ?? false;
    });
@@ -24,20 +27,14 @@ const Card = data => {
   };
 
   useEffect(() => {
+    localStorage.setItem(user + 'F', JSON.stringify(followers));
     localStorage.setItem(user, JSON.stringify(isFollowing));
-  }, [isFollowing]);
-
-  // в локалстореджі треба запамятати ще кількість фоловерів, 
-  // бо при перезавантаж збивається на поч.знач
+  }, [isFollowing, followers]);
 
   return (
     <>
       <CardWrapper>
-        <BG></BG>
-        <img src="../../images/logo.png" alt="logo"></img>
-        <img src="../../images/quotes.png" alt="quotes"></img>
-        <img src="../images/rectangle.png" alt="rectangle"></img>
-        <img src="../images/ellipse.png" alt="ellipse"></img>
+        <Deco/>
         <Info user={user} tweets={tweets} followers={followers} />
         {!isFollowing ? (
           <Btn onClick={handleClick}>Follow</Btn>

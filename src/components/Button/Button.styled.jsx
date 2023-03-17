@@ -5,7 +5,7 @@ cursor: pointer;
   justify-content: center;
   align-items: center;
   padding: 14px 28px;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   width: 196px;
   height: 50px;
   background: #ebd8ff;
