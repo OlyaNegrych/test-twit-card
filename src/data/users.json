@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Mango",
+    "tweets": 111,
+    "followers": 111500,
+    "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
+  },
+  {
+    "id": 2,
+    "name": "Polly",
+    "tweets": 222,
+    "followers": 22500,
+    "avatar": "https://thumbs.dreamstime.com/z/avatar-da-mulher-do-centro-de-atendimento-do-%C3%ADcone-do-operador-do-apoio-ao-cliente-dos-desenhos-animados-95907444.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Alex",
+    "tweets": 333,
+    "followers": 30500,
+    "avatar": "https://thumbs.dreamstime.com/z/ilustra%C3%A7%C3%A3o-loura-dos-desenhos-animados-do-plano-de-servi%C3%A7o-ao-cliente-do-homem-91842741.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Ajax",
+    "tweets": 444,
+    "followers": 4500,
+    "avatar": "https://thumbs.dreamstime.com/z/homem-do-operador-de-yemen-%C3%A1rabe-com-o-servi%C3%A7o-informa%C3%A7%C3%B5es-s-ao-cliente-dos-auriculares-100286068.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Riki",
+    "tweets": 555,
+    "followers": 555000,
+    "avatar": "https://thumbs.dreamstime.com/z/homem-do-servi%C3%A7o-ao-cliente-36210696.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Pikachu",
+    "tweets": 667,
+    "followers": 64500,
+    "avatar": "https://thumbs.dreamstime.com/z/homem-do-operador-de-yemen-%C3%A1rabe-com-o-servi%C3%A7o-informa%C3%A7%C3%B5es-s-ao-cliente-dos-auriculares-100286068.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Niki",
+    "tweets": 777,
+    "followers": 75700,
+    "avatar": "https://thumbs.dreamstime.com/z/homem-do-servi%C3%A7o-ao-cliente-36210696.jpg"
+  }
+]

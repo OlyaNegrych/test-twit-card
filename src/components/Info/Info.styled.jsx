@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const UserPhoto = styled.img`
-position: relative;
+  position: relative;
   display: block;
   max-width: 100%;
   height: auto;
-  width: 62px;
+  width: 64px;
   border-radius: 50%;
   margin-bottom: 16px;
+  background-color: #5736a3;
 `;
 
 export const Text = styled.p`

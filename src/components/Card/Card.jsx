@@ -1,41 +1,43 @@
 import { useEffect, useState } from 'react';
-import user from '../../data/user.json';
 import Info from 'components/Info/Info';
 import Deco from '../Deco/Deco';
 import { Btn } from '../Button/Button.styled';
-import { CardWrapper } from '../Card/Card.styled';
-// import Button from '../Button/Button';
+import { CardWrapper, GalleryItem } from '../Card/Card.styled';
 
-const Card = data => {
-  const [user, setUser] = useState('Mango Polly');
-  const [tweets, setTweets] = useState(999);
-  const [followers, setFollowers] = useState(() => {
-    return JSON.parse(localStorage.getItem(user + 'F')) ?? 100500;
-  });
+const Card = ({ name, tweets, followers, avatar }) => {
   const [isFollowing, setIsFollowing] = useState(() => {
-     return JSON.parse(localStorage.getItem(user)) ?? false;
-   });
+    return JSON.parse(localStorage.getItem(name)) ?? false;
+  });
+
+  const [correntFollowers, setCurrentFollowers] = useState(() => {
+    return JSON.parse(localStorage.getItem(name + 'F')) ?? followers;
+  });
 
   const handleClick = () => {
     if (!isFollowing) {
-      setFollowers(followers + 1);
+      setCurrentFollowers(correntFollowers + 1);
       setIsFollowing(true);
     } else {
-      setFollowers(followers - 1);
+      setCurrentFollowers(correntFollowers - 1);
       setIsFollowing(false);
     }
   };
 
   useEffect(() => {
-    localStorage.setItem(user + 'F', JSON.stringify(followers));
-    localStorage.setItem(user, JSON.stringify(isFollowing));
+    localStorage.setItem(name + 'F', JSON.stringify(correntFollowers));
+    localStorage.setItem(name, JSON.stringify(isFollowing));
   }, [isFollowing, followers]);
 
   return (
-    <>
+    <GalleryItem>
       <CardWrapper>
-        <Deco/>
-        <Info user={user} tweets={tweets} followers={followers} />
+        <Deco />
+        <Info
+          name={name}
+          tweets={tweets}
+          followers={correntFollowers}
+          avatar={avatar}
+        />
         {!isFollowing ? (
           <Btn onClick={handleClick}>Follow</Btn>
         ) : (
@@ -43,9 +45,8 @@ const Card = data => {
             Following
           </Btn>
         )}
-        {/* <Button onClick={handleClick} isFollowing={isFollowing} />; */}
       </CardWrapper>
-    </>
+    </GalleryItem>
   );
 };
 

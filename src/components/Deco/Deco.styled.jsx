@@ -20,6 +20,6 @@ export const Rectangle = styled.img`
 
 export const Ellipse = styled.img`
   position: absolute;
-  top: 176px;
+  top: 177px;
   left: 145px;
 `;
