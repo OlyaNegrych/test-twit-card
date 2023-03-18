@@ -26,7 +26,7 @@ const Card = ({ name, tweets, followers, avatar }) => {
   useEffect(() => {
     localStorage.setItem(name + 'F', JSON.stringify(correntFollowers));
     localStorage.setItem(name, JSON.stringify(isFollowing));
-  }, [isFollowing, correntFollowers]);
+  }, [isFollowing, correntFollowers, name]);
 
   return (
     <GalleryItem>
