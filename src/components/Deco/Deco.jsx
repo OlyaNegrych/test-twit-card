@@ -1,7 +1,7 @@
 import logo from 'images/logo.png';
 import quotes from 'images/quotes.png';
 import rectangle from 'images/rectangle.png';
-import ellipse from 'images/Ellipse.png';
+import ellipse from 'images/ellipse.png';
 import { Logo, Quotes, Rectangle, Ellipse } from './Deco.styled';
 
 const Deco = () => {
