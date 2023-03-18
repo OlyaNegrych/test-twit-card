@@ -18,4 +18,4 @@
 
 ## Жива сторінка
 
-Перейшовши на живу сторінку на github [https://olyanegrych.github.io/test-twit-card/] можна переглянути і протестувати цей проект.
+Перейшовши на живу сторінку на github [https://olyanegrych.github.io/test-twit-card/] можна переглянути і протестувати цей проект...
