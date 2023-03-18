@@ -1,7 +1,6 @@
-import {Btn} from './Button.styled';
+import { Btn } from './Button.styled';
 
-const Button = ({ handleClick, isFollowing }) => {
-  // return <Btn onClick={handleClick}>Follow</Btn>;
+const Button = ({ handleClick, isFollowing, currentFollowers }) => {
   return (
     <>
       {!isFollowing ? (

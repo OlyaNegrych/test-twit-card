@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Info from 'components/Info/Info';
 import Deco from '../Deco/Deco';
-import { Btn } from '../Button/Button.styled';
+import Button from 'components/Button/Button';
 import { CardWrapper, GalleryItem } from '../Card/Card.styled';
 
 const Card = ({ name, tweets, followers, avatar }) => {
@@ -9,24 +9,24 @@ const Card = ({ name, tweets, followers, avatar }) => {
     return JSON.parse(localStorage.getItem(name)) ?? false;
   });
 
-  const [correntFollowers, setCurrentFollowers] = useState(() => {
+  const [currentFollowers, setCurrentFollowers] = useState(() => {
     return JSON.parse(localStorage.getItem(name + 'F')) ?? followers;
   });
 
   const handleClick = () => {
     if (!isFollowing) {
-      setCurrentFollowers(correntFollowers + 1);
+      setCurrentFollowers(currentFollowers + 1);
       setIsFollowing(true);
     } else {
-      setCurrentFollowers(correntFollowers - 1);
+      setCurrentFollowers(currentFollowers - 1);
       setIsFollowing(false);
     }
   };
 
   useEffect(() => {
-    localStorage.setItem(name + 'F', JSON.stringify(correntFollowers));
+    localStorage.setItem(name + 'F', JSON.stringify(currentFollowers));
     localStorage.setItem(name, JSON.stringify(isFollowing));
-  }, [isFollowing, correntFollowers, name]);
+  }, [isFollowing, currentFollowers, name]);
 
   return (
     <GalleryItem>
@@ -35,16 +35,14 @@ const Card = ({ name, tweets, followers, avatar }) => {
         <Info
           name={name}
           tweets={tweets}
-          followers={correntFollowers}
+          followers={currentFollowers}
           avatar={avatar}
         />
-        {!isFollowing ? (
-          <Btn onClick={handleClick}>Follow</Btn>
-        ) : (
-          <Btn style={{ backgroundColor: '#5CD3A8' }} onClick={handleClick}>
-            Following
-          </Btn>
-        )}
+        <Button
+          handleClick={handleClick}
+          isFollowing={isFollowing}
+          currentFollowers={currentFollowers}
+        />
       </CardWrapper>
     </GalleryItem>
   );
