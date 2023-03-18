@@ -6,7 +6,8 @@ export const UserPhoto = styled.img`
   max-width: 100%;
   height: auto;
   width: 64px;
-  border-radius: 50%;
+  height: 64px;
+  border-radius: 100%;
   margin-bottom: 16px;
   background-color: #5736a3;
 `;
