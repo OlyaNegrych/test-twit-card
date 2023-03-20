@@ -41,7 +41,6 @@ const Card = ({ name, tweets, followers, avatar }) => {
         <Button
           handleClick={handleClick}
           isFollowing={isFollowing}
-          currentFollowers={currentFollowers}
         />
       </CardWrapper>
     </GalleryItem>

@@ -8,9 +8,9 @@ const Deco = () => {
   return (
     <>
       <Logo src={logo} alt="logo"></Logo>
-      <Quotes src={quotes}></Quotes>
+      <Quotes src={quotes} alt="quotes"></Quotes>
       <Rectangle src={rectangle} alt="rectangle"></Rectangle>
-      <Ellipse src={ellipse}></Ellipse>
+      <Ellipse src={ellipse} alt="ellipse"></Ellipse>
     </>
   );
 };

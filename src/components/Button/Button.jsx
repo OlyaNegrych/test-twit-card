@@ -1,15 +1,16 @@
 import { Btn } from './Button.styled';
 
-const Button = ({ handleClick, isFollowing, currentFollowers }) => {
+const Button = ({ handleClick, isFollowing }) => {
   return (
     <>
-      {!isFollowing ? (
-        <Btn onClick={handleClick}>Follow</Btn>
-      ) : (
-        <Btn style={{ backgroundColor: '#5CD3A8' }} onClick={handleClick}>
-          Following
-        </Btn>
-      )}
+   
+      <Btn
+        onClick={handleClick}
+        style={{ backgroundColor: isFollowing ? '#5CD3A8' : '#ebd8ff' }}
+      >
+        {isFollowing ? 'Following' : 'Follow'}
+      </Btn>
+
     </>
   );
 };
